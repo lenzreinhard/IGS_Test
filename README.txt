@@ -1,17 +1,38 @@
-After Installing python3 on it's website please run these commands on cmd of the windows (C:\users\$username$)
+Install Python 3.10 at https://www.python.org/downloads/
 
->> mkdir App
->> cd App
+Navigate until the directory of the project by cmd and execute the following commands:
+
+(It's neessary that python and its subdirectory Scripts are set in enviroment variable of the windows)
+
 >> pip install virtualenv
->> virtualenv IGS_Django_Test_App
->> IGS_Django_Test_App\Scripts\activate
+>> virtualenv IGS_Test
+>> IGS_Test\Scripts\activate
 >> pip install django
->> django-admin startproject IGS_DTApp
 >> cd IGS_DTApp
->> python manage.py migrate
->> python manage.py createsuperuser (Placing username, email and password)
->> django-admin startapp CRUD
 >> pip install djangorestframework
->> python manage.py makemigrations
->> python manage.py migrate
 >> python manage.py runserver
+
+After that everything is configured and now you can see the project by the browser at:
+
+http://localhost:8000/admin - Django Panel
+user: IGSAppTest
+password: IGSAppTest
+
+So there you can add, edit, select and delete the employees and departments data
+
+The API endpoints are:
+
+http://localhost:8000/api/employee
+http://localhost:8000/api/employee/<int:pk>
+http://localhost:8000/api/employee/create
+http://localhost:8000/api/employee/delete/<int:pk>
+
+http://localhost:8000/api/department
+http://localhost:8000/api/department/<int:pk>
+http://localhost:8000/api/department/create
+http://localhost:8000/api/department/delete/<int:pk>
+
+The webpages listing deparmtents and employees are
+
+http://localhost:8000/employees
+http://localhost:8000/departments
