@@ -1,0 +1,3 @@
+[submodule "Python2"]
+	path = Python2
+	url = https://github.com/lenzreinhard/IGS_Test.git
